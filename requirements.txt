@@ -1,0 +1,4 @@
+selenium==4.18.1
+webdriver-manager==4.0.1
+mitmproxy==10.2.4
+selenium-stealth==1.0.6
