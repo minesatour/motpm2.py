@@ -21,10 +21,11 @@ from mitmproxy.tools.dump import DumpMaster
 from webdriver_manager.chrome import ChromeDriverManager
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
+from typing import Optional  # Fixed: Added Optional to imports
 
 # Configure logging with detailed traffic output
 logging.basicConfig(
-    level=logging.DEBUG,  # Changed to DEBUG for more detail
+    level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("otp_interception.log"), logging.StreamHandler()]
 )
@@ -33,7 +34,7 @@ logging.basicConfig(
 PROXY_HOST = "127.0.0.1"
 PROXY_PORT = 8080
 DATABASE = "otps.db"
-TIMEOUT = 300  # 5 minutes to give ample time for analysis
+TIMEOUT = 300
 
 # User-Agent list
 USER_AGENTS = [
